@@ -1,42 +1,37 @@
 {
   "project_info": {
-    "project_number": "",
-    "firebase_url": "",
-    "project_id": "",
-    "storage_bucket": ""
+    "project_number": "23539476384",
+    "firebase_url": "https://helpdesk-1576648612662.firebaseio.com",
+    "project_id": "helpdesk-1576648612662",
+    "storage_bucket": "helpdesk-1576648612662.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:111111111111:android:1111111111111111",
+        "mobilesdk_app_id": "1:23539476384:android:6fb7e69b1a97dd97ea26c5",
         "android_client_info": {
           "package_name": "com.bientechnologies.bienguru"
         }
       },
       "oauth_client": [
         {
-          "client_id": "",
+          "client_id": "23539476384-38i8il5sd8b67aeqdojk5lldtl7iflku.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": ""
-        },
-        {
-          "current_key": ""
+          "current_key": "AIzaSyAjgcm4_7iIqz-OGdFZeFLYguQgNcUtc4k"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23539476384-38i8il5sd8b67aeqdojk5lldtl7iflku.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
