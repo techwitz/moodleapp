@@ -3,7 +3,7 @@
     <name>BienLearn</name>
     <description>Bien Guru Learning application</description>
     <author email="sales@bientechnologies.com" href="https://bientechnologies.com">Bien Learn Team</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://localhost:8100" />
     <access origin="*" />
     <access launch-external="yes" origin="tel:*" />
     <access launch-external="yes" origin="mailto:*" />
@@ -640,4 +640,5 @@
             </array>
         </config-file>
     </platform>
+    <allow-navigation href="http://localhost:8100" sessionid="4277c802" />
 </widget>
