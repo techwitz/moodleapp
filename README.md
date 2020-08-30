@@ -40,8 +40,51 @@ export PATH=$PATH:"/Users/ajandersingh/Library/Android/sdk/platform-tools"
 
 # emulator
 export PATH=$PATH:"/Users/ajandersingh/Library/Android/sdk/emulator"
+# zipalgin
+export PATH=$PATH:"/Users/ajandersingh/Library/Android/sdk/build-tools/30.0.2"
 ```
 
 cordova plugin save
 ionic cordova platform rm ios
 ionic cordova platform add ios
+sudo npm install -g ios-deploy --unsafe-perm=true
+sudo npm install -g cordova-res --unsafe-perm=true
+
+debug keystore generate
+```
+keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000
+```
+
+#Generating a release build of an app
+To generate a release build for Android, run the following cli command:
+
+```
+ionic cordova build android --prod --release
+```
+
+#Signing an APK
+First, the unsigned APK must be signed. If a signing key has already been generated, skip these steps and use that one instead. Generate a private key using the keytool command that comes with the Android SDK:
+
+```
+ keytool -genkey -v -keystore bienguru-release-key.keystore -alias bienguru -keyalg RSA -keysize 2048 -validity 10000
+ keytool -importkeystore -srckeystore bienguru-release-key.keystore -destkeystore bienguru-release-key-pkcs12.keystore -deststoretype pkcs12
+
+ password: pa55w0rd
+ ```
+
+To sign the unsigned APK, run the jarsigner tool which is also included in the Android SDK:
+```
+ionic cordova run android --aot --release
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore bienguru-release-key.keystore platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk release
+
+password: pa55w0rd
+```
+
+Finally, the zip align tool must be ran to optimize the APK. The zipalign tool can be found in ```/path/to/Android/sdk/build-tools/VERSION/zipalign```. For example, on macOS with Android Studio installed, ```zipalign``` is in ```~/Library/Android/sdk/build-tools/VERSION/zipalign```
+
+```
+zipalign -v 4 platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk bienguru-released.apk
+```
+
+
+ ##Always make chengs in  src/config.json file
