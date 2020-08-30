@@ -46,3 +46,5 @@ e2e/build
 !/desktop/assets/
 !/desktop/electron.js
 src/configconstants.ts
+
+*.apk

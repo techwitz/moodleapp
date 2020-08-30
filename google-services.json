@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "23539476384-17h73ejttat8gbkv0lprtqf4vjjtuhr6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bientechnologies.bienguru",
+            "certificate_hash": "7abfd934572485d5293e5c103eeb96d542aaaa1a"
+          }
+        },
+        {
           "client_id": "23539476384-38i8il5sd8b67aeqdojk5lldtl7iflku.apps.googleusercontent.com",
           "client_type": 3
         }
