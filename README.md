@@ -41,3 +41,7 @@ export PATH=$PATH:"/Users/ajandersingh/Library/Android/sdk/platform-tools"
 # emulator
 export PATH=$PATH:"/Users/ajandersingh/Library/Android/sdk/emulator"
 ```
+
+cordova plugin save
+ionic cordova platform rm ios
+ionic cordova platform add ios
